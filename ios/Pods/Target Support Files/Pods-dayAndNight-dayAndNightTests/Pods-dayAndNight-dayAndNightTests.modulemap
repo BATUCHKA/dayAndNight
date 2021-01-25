@@ -1,0 +1,6 @@
+module Pods_dayAndNight_dayAndNightTests {
+  umbrella header "Pods-dayAndNight-dayAndNightTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
