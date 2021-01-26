@@ -7,21 +7,19 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import { DayAndNight } from './screens/dayAndNight';
 
 
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        
-      </SafeAreaView>
+    <DayAndNight />
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  
+
 });
 
 export default App;
