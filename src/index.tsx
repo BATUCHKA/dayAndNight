@@ -13,7 +13,7 @@ import { DayAndNight } from './screens/dayAndNight';
 const App = () => {
   return (
     <>
-    <DayAndNight />
+      <DayAndNight />
     </>
   );
 };

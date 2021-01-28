@@ -1,10 +1,10 @@
 import React from 'react';
 import Svg, { Defs, Path, Stop, LinearGradient } from 'react-native-svg'
 
-export const Background = () => {
+export const Background:React.FC<any> = (props) => {
     return (
         <>
-            <Svg viewBox="0 0 263 525" fill="none" >
+            <Svg viewBox="0 0 263 525" fill="none" {...props} >
                 <Path d="M-28.3643 -12.4545L-28.3643 524.308H273.612L273.612 -12.4545H-28.3643Z" fill="url(#paint0_linear)" />
                 <Defs>
                     <LinearGradient id="paint0_linear" x1="122.631" y1="524.308" x2="122.631" y2="-12.4545" gradientUnits="userSpaceOnUse">

@@ -24,8 +24,8 @@ import {
     Trees,
     Sun,
     Clouds,
-
 } from '../icons';
+import { Switch } from '../components'
 
 
 const { height, width } = Dimensions.get('window');
@@ -36,21 +36,26 @@ export const DayAndNight = () => {
 
     useEffect(() => {
         Animated.timing(
-          posx,
-          {
-            toValue: 1000,
-            delay: 1000,
-            easing: Easing.linear,
-            useNativeDriver: true,
-          }
+            posx,
+            {
+                toValue: 1000,
+                delay: 1000,
+                easing: Easing.linear,
+                useNativeDriver: true,
+            }
         ).start();
-      }, [])
+    }, [])
 
     return (
         <>
             <View style={styles.bg}>
-                <Background />
+                <Background style={styles.bg} />
             </View>
+
+            <View style={styles.switchButton}>
+                <Switch></Switch>
+            </View>
+
             <View style={styles.bigMountain}>
                 <BigMountain />
             </View>
@@ -105,8 +110,8 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     bg: {
-        width: width,
-        height: height,
+        width: '100%',
+        height: '100%',
         position: 'absolute',
     },
     bigMountain: {
@@ -120,30 +125,30 @@ const styles = StyleSheet.create({
     mountainTexture: {
         position: 'absolute',
         width: width / 2.4456,
-        height: height /5.576,
+        height: height / 5.576,
         left: width / 19,
         top: height / 1.64,
         zIndex: 0,
     },
     mountain1: {
-      position: 'absolute',
-      top: height / 1.339,
-      width: width / 1.81,
-      height: height / 7.625,  
-      left: width / -9,
+        position: 'absolute',
+        top: height / 1.339,
+        width: width / 1.81,
+        height: height / 7.625,
+        left: width / -9,
     },
     mountain2: {
         position: 'absolute',
         width: width / 1.036,
-        height: height  / 4.3786,
+        height: height / 4.3786,
         top: height / 1.4427,
         left: width / 9.72,
     },
-    mountain3 : {
+    mountain3: {
         position: 'absolute',
         width: width / 2.47,
         height: height / 10,
-        top: height/ 1.376,
+        top: height / 1.376,
         left: width / 2.53,
     },
     mountain4: {
@@ -206,7 +211,7 @@ const styles = StyleSheet.create({
         width: width / 3.9463,
         height: height / 7.9024,
         left: width / 4.573,
-        top: height / 2.0511,
+        top: height / 2.6511,
     },
     clouds: {
         position: 'absolute',
@@ -215,4 +220,9 @@ const styles = StyleSheet.create({
         top: height / 9.8863,
         left: width / -6.8559,
     },
+    switchButton:{
+        width: '95%',
+        display: 'flex',
+        alignItems: 'flex-end'
+    }
 });
